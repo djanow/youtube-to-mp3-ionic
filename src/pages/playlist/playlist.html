@@ -1,0 +1,14 @@
+
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Playlist</ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content (ngModel)="movie">
+
+    <img [src]="video.snippet.thumbnails.default.url">
+    <h2>{{ video.snippet.title }}</h2>
+    <p>{{ video.snippet.description }}</p>
+    <iframe [src]="downloadFrameLink(video.id.videoId)" width="300" height="340" scrolling="no" style="border:none;"></iframe>
+</ion-content>

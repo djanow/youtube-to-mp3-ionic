@@ -1,0 +1,7 @@
+{
+  "name": "youtube to mp3",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
