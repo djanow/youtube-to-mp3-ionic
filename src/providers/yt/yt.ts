@@ -10,7 +10,7 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class YtProvider {
-  apiKey = '';
+  apiKey = 'AIzaSyBsJ-HGJzK7CWbA2JAqiqe50Il3rFBPpWg';
 
   constructor(public http: Http) {
     

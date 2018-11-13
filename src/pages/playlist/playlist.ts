@@ -28,8 +28,11 @@ export class PlaylistPage {
     }
   }
   downloadFrameLink(id){
-    console.log("id "+id);
     let tmp = 'https://www.yt2mp3s.me/@api/button/mp3/' + id;
+    return this.sanitizer.bypassSecurityTrustResourceUrl(tmp);
+  }
+  playerVideo(id){
+    let tmp = 'https://www.youtube.com/embed/' + id;
     return this.sanitizer.bypassSecurityTrustResourceUrl(tmp);
   }
 }

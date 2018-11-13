@@ -5,10 +5,12 @@
   </ion-navbar>
 </ion-header>
  
-<ion-content (ngModel)="movie">
+<ion-content >
 
-    <img [src]="video.snippet.thumbnails.default.url">
+    <img [src]="video.snippet.thumbnails.high.url" (clic)="openVideo(video)">
     <h2>{{ video.snippet.title }}</h2>
     <p>{{ video.snippet.description }}</p>
-    <iframe [src]="downloadFrameLink(video.id.videoId)" width="300" height="340" scrolling="no" style="border:none;"></iframe>
+    <iframe [src]="downloadFrameLink(video.id.videoId)" width="100%" height="240" scrolling="no" style="border:none;"></iframe>
+    <iframe width="100%" height="100%" [src]="playerVideo(video.id.videoId)">
+</iframe>
 </ion-content>
